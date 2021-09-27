@@ -9,9 +9,9 @@ source:
   sha256: e59913af105b9860aa2c8d3272d9de5a56a4e608db9a2f167a8480b323d529a7
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -32,7 +32,13 @@ about:
   home: https://github.com/micheles/decorator
   license: BSD-2-Clause
   license_file: LICENSE.txt
-  summary: Decorators for Humans
+  summary: Better living through Python with decorators.
+  description: |
+    Preserve the signature of decorated functions in a consistent way
+    across Python releases.
+  doc_url: http://decorator.readthedocs.io/en/stable/
+  doc_source_url: https://github.com/micheles/decorator/tree/master/docs
+  dev_url: https://github.com/micheles/decorator
 
 extra:
   recipe-maintainers:
