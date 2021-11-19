@@ -10,17 +10,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >= 3.5
     - pip
     - setuptools
     - wheel
   run:
-    - python
+    - python >= 3.5
 
 test:
   requires:
