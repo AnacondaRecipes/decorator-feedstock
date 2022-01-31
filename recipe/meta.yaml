@@ -1,11 +1,12 @@
+{% set name = "decorator" %}
 {% set version = "5.1.1" %}
 
 package:
-  name: decorator
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/decorator/decorator-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/decorator-{{ version }}.tar.gz
   sha256: 637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330
 
 build:
@@ -33,13 +34,14 @@ test:
 about:
   home: https://github.com/micheles/decorator
   license: BSD-2-Clause
+  license_family: BSD
   license_file: LICENSE.txt
   summary: Better living through Python with decorators.
   description: |
     Preserve the signature of decorated functions in a consistent way
     across Python releases.
   doc_url: https://github.com/micheles/decorator/blob/master/docs/documentation.md
-  doc_source_url: https://github.com/micheles/decorator/tree/master/docs
+  doc_source_url: https://github.com/micheles/decorator/tree/{{ version }}/docs
   dev_url: https://github.com/micheles/decorator
 
 extra:
